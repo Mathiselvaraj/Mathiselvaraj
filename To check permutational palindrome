@@ -1,0 +1,28 @@
+public class Mathi{
+    public static boolean ispalin(String str){
+        int[] charcount=new int[26];
+       int oddc=0;
+        for(char ch: str.toCharArray()) {
+          if(Character.isLetter(ch))
+          {
+         int   index=Character.toLowerCase(ch)-'a';
+            charcount[index]++;
+            if(charcount[index]%2==1)
+            oddc++;
+            else
+            oddc--;  }
+       
+        }
+        return oddc<=1; 
+        }
+
+public static void main(String[] args){
+String str = "malayalam";
+if(ispalin(str)){
+System.out.println("TRUE");
+}
+else{
+    System.out.println("FALSE");
+}
+}
+}
