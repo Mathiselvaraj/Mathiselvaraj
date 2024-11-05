@@ -1,0 +1,38 @@
+class HelloWorld {
+     
+     public static int max(int[]arr){
+         int min1,min2,max1,max2;
+         min1=Integer.MAX_VALUE;
+         min2=Integer.MAX_VALUE;
+         max1=Integer.MIN_VALUE;
+         max2=Integer.MIN_VALUE;
+         
+         
+         for(int n: arr){
+             if(n>max1){
+                 max2=max1;
+                 max1=n;
+             }else if(n>max2){
+                 max2=n;
+             }if(n<min1){
+                 min2=min1;
+                 min1=n;
+                 
+             }else if(n<min2){
+                 min2=n;
+             }
+         }
+         int a,b,c;
+         a=min1*min2;
+         b=max1*max2;
+         c=a>b?a:b;
+         return c;
+     }
+    
+
+    
+    public static void main(String[] args) {
+        int [] arr={ 2,4,5,-10,-8,3,6};
+      System.out.println("max product :"+ max( arr));
+    }
+}
